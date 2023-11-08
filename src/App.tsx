@@ -1,24 +1,33 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from 'react';
+import { AppDispatch } from './store/store';
+import ItemForm from './components/ItemForm';
+import ShoppingCart from './components/ShoppingCart';
+import ShopList from './components/ShopList';
+import { useDispatch } from 'react-redux';
+import { loadShops } from './actions/shopActions';
 
 function App() {
+  const dispatch: AppDispatch = useDispatch();
+
+  useEffect(() => {
+    // Dispatch the action to load shops when the component mounts
+    dispatch(loadShops());
+  }, [dispatch]);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Shopping Cart Application</h1>
+      <div className="container">
+        <div className="left-column">
+          <ItemForm />
+        </div>
+        <div className="right-column">
+          <ShoppingCart />
+        </div>
+      </div>
+      <div className="shop-list-container">
+        <ShopList />
+      </div>
     </div>
   );
 }
