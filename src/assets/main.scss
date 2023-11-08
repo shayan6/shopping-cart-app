@@ -1,15 +1,143 @@
-@import 'variables';
+@import "./variables.scss";
+@import "https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.5.5/css/simple-line-icons.min.css";
 
+// ##############################################################
+// Page Layout ##################################################
+// ##############################################################
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f0f0f0;
-  color: #333;
-  margin: 0;
-  padding: 0;
+  margin: 0 auto;
+  font-family: $bodyFont !important;
+}
+header {
+  border-bottom: 1px solid rgba(5, 5, 5, 0.06);
+}
+.ant-menu {
+  border: none !important;
+}
+aside {
+  padding-top: 1rem;
+  border-right: 1px solid rgba(5, 5, 5, 0.06);
+}
+.site-page-header {
+  margin-bottom: 1rem;
+  .ant-typography {
+    margin: 0;
+  }
+}
+.site-page-header .ant-card-body {
+  padding-top: 0.8rem;
+  padding-bottom: 0.8rem;
+}
+.ant-layout-content {
+  margin: $layoutMargin;
+  padding: $layoutPadding;
+  min-height: 90vh !important;
+}
+.ant-layout-sider-trigger {
+  display: none;
+}
+.logo img {
+  height: 32px;
+  margin-right: 12px;
+  vertical-align: middle;
+}
+.breadcrumb {
+  margin-bottom: 1rem;
+}
+.ant-divider-horizontal {
+  margin: 1rem 0;
+}
+.text-right {
+  text-align: right;
 }
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
+// ##############################################################
+// Settings #####################################################
+// ##############################################################
+[type="color"] {
+  appearance: none;
+  padding: 0;
+  width: 3rem !important;
+  height: 1.5rem !important;
+  border: none;
+  border-radius: 8px;
+}
+[type="color"]::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+[type="color"]::-webkit-color-swatch {
+  border: none;
+}
+
+//  ###############################################################################
+// Theme ##########################################################################
+//  ###############################################################################
+.ant-layout .ant-layout-header.ant-layout-sider-dark .logo span {
+  color: rgba(255, 255, 255, 0.65);
+}
+.ant-layout-sider.ant-layout-sider-light,
+.ant-layout-header.ant-layout-sider-light,
+.ant-menu-light {
+  background-color: transparent;
+}
+
+//  ###############################################################################
+// Sidebar Style ##################################################################
+//  ###############################################################################
+.ant-layout-sider-children {
+  position: relative;
+}
+.toggle-collapse {
+  position: absolute;
+  cursor: pointer;
+  right: -18px;
+  width: 18px;
+  padding: 35px 2px;
+  top: 160px;
+  z-index: 1;
+  background: $colorPrimary;
+  color: #fff;
+  border: none;
+  clip-path: polygon(0 0, 100% 20%, 100% 80%, 0% 100%);
+  span {
+    padding: 0;
+  }
+}
+.trigger {
+  padding: 0 24px;
+  font-size: 18px;
+  line-height: 64px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.trigger:hover {
+  color: $colorPrimary;
+}
+.ant-menu li:hover {
+  .ant-menu-item-icon {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+    transition: all 0.2s ease;
+  }
+  .ant-menu-title-content {
+    margin-left: 15px;
+    transition: all 0.2s ease;
+  }
+}
+
+.transition-scale:hover {
+  .element {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+    transition: all 0.2s ease;
+  }
+  span {
+    margin-left: 5px;
+    transition: all 0.2s ease;
+  }
+  .license-image-element {
+    padding: 2px !important;
+    transition: all 0.2s ease;
+  }
 }

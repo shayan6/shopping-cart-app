@@ -1,11 +1,8 @@
 import { Layout, Menu } from "antd";
 import {
   DashboardOutlined,
-  EnvironmentOutlined,
   ReconciliationOutlined,
   SettingOutlined,
-  TeamOutlined,
-  CalendarOutlined,
 } from "@ant-design/icons";
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
@@ -37,27 +34,9 @@ export default function Sidebar() {
       isActive: true,
     },
     {
-      name: "Appointments",
-      icon: <CalendarOutlined />,
-      path: "/Appointments", // Use the correct path format
-      display: true,
-    },
-    {
-      name: "Locations",
-      icon: <EnvironmentOutlined />,
-      path: "/Locations", // Use the correct path format
-      display: true,
-    },
-    {
-      name: "Services",
+      name: "Shopping cart",
       icon: <ReconciliationOutlined />,
-      path: "/Services", // Use the correct path format
-      display: true,
-    },
-    {
-      name: "Staff",
-      icon: <TeamOutlined />,
-      path: "/Staff", // Use the correct path format
+      path: "/Appointments", // Use the correct path format
       display: true,
     },
     {
