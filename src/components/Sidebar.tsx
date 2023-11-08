@@ -36,7 +36,7 @@ export default function Sidebar() {
     {
       name: "Shopping cart",
       icon: <ReconciliationOutlined />,
-      path: "/Appointments", // Use the correct path format
+      path: "/Shop", // Use the correct path format
       display: true,
     },
     {

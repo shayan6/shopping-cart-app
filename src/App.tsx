@@ -1,15 +1,15 @@
 import React, { useEffect } from 'react';
 import { AppDispatch } from './store/store';
-import ItemForm from './components/ItemForm';
-import ShoppingCart from './components/ShoppingCart';
-import ShopList from './components/ShopList';
 import { useDispatch } from 'react-redux';
 import { loadShops } from './actions/shopActions';
 import Sidebar from './components/Sidebar';
-import { HashRouter } from 'react-router-dom';
+import { HashRouter, Routes, Route } from "react-router-dom";
 import { Content } from "antd/es/layout/layout";
 import { ConfigProvider, Col, Divider, Layout, Row } from "antd";
 import Footer from './components/Footer';
+import Shop from './pages/Shop';
+import Dashboard from './pages/Dashboard';
+import Settings from './pages/Settings';
 
 function App() {
   const dispatch: AppDispatch = useDispatch();
@@ -26,18 +26,11 @@ function App() {
           <Layout className="site-layout">
             <Sidebar />
             <Content>
-              <h1>Shopping Cart Application</h1>
-              <div className="container">
-                <div className="left-column">
-                  <ItemForm />
-                </div>
-                <div className="right-column">
-                  <ShoppingCart />
-                </div>
-              </div>
-              <div className="shop-list-container">
-                <ShopList />
-              </div>
+              <Routes>
+                <Route path="*" element={<Dashboard />} />
+                <Route path="/Shop" element={<Shop />} />
+                <Route path="/Settings" element={<Settings />} />
+              </Routes>
               <Row gutter={18}>
                 <Col span={24}>
                   <Divider />
