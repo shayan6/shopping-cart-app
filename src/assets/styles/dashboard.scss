@@ -58,67 +58,6 @@
   background-color: rgba(6, 155, 211, 0.1);
 }
 
-.table-responsive {
-  display: block;
-  width: 100%;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-}
-.table.table-padded {
-  border-collapse: separate;
-  border-spacing: 0 5px;
-}
-.table.table-padded thead tr th {
-  border: none;
-  font-size: .81rem;
-  color: rgba(90,99,126,0.49);
-  letter-spacing: 1px;
-  padding: 0.3rem 1.1rem;
-}
-.table tfoot th, .table thead th {
-  font-size: .63rem;
-  text-transform: uppercase;
-  border-top: none;
-}
-.table.table-padded tbody tr {
-  border-radius: 4px;
-  -webkit-transition: all 0.1s ease;
-  transition: all 0.1s ease;
-}
-.table.table-padded tbody td:first-child {
-  border-radius: 4px 0px 0px 4px;
-}
-.table.table-padded tbody td {
-  padding: 0.9rem 1.1rem;
-  background-color: #fff;
-  border: none;
-  border-right: 1px solid rgba(0,0,0,0.03);
-}
-.table .user-with-avatar {
-  white-space: nowrap;
-}
-.table .lighter {
-  color: rgba(90,99,126,0.49);
-}
-.table .user-with-avatar {
-  white-space: nowrap;
-}
-.table.table-padded tbody td img {
-  display: inline-block;
-  vertical-align: middle;
-}
-.table .user-with-avatar img {
-  width: 35px;
-  height: 35px;
-  display: inline-block;
-  vertical-align: middle;
-  border-radius: 50px;
-}
-.table.table-padded tbody td img+span {
-  display: inline-block;
-  margin-left: 10px;
-  vertical-align: middle;
-}
 .activity-boxes-w .activity-box-w {
   display: -webkit-box;
   display: flex;
