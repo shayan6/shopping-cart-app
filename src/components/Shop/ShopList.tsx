@@ -1,8 +1,8 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import { RootState } from "../store/store";
+import { RootState } from "../../store/store";
 import { Card } from "antd";
-import { Shop } from "../types";
+import { Shop } from "../../types";
 
 const ShopList = () => {
   const shops: Shop[] = useSelector((state: RootState) => state.shop.shops);

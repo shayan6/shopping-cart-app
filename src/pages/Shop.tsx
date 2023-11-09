@@ -1,6 +1,6 @@
 import React from 'react';
 import ItemForm from '../components/Shop/ItemForm';
-import ShopList from '../components/ShopList';
+import ShopList from '../components/Shop/ShopList';
 import ShoppingCart from '../components/Shop/ShoppingCart';
 import { Row, Col, Card } from "antd";
 import PageHeader from "../components/PageHeader";
