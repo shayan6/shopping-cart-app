@@ -1,5 +1,4 @@
-import { Button, Card, Col, Row, Typography } from "antd";
-import { PlusOutlined } from '@ant-design/icons';
+import { Card, Col, Row, Typography } from "antd";
 import BreadCumb from "./BreadCumb";
 
 export default function PageHeader({ title }: { title: string }) {

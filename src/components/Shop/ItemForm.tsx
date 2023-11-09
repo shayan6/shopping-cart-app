@@ -1,11 +1,11 @@
 // src/components/ItemForm/ItemForm.tsx
-import React, { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { addItem } from '../../reducers/cartReducer';
-import { v4 as uuidv4 } from 'uuid';
-import { RootState } from '../../store/store';
-import { Button, Form, Input, Select, Row, Col, Typography } from 'antd';
-import type { FormInstance } from 'antd/es/form';
+import React from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { addItem } from "../../reducers/cartReducer";
+import { v4 as uuidv4 } from "uuid";
+import { RootState } from "../../store/store";
+import { Button, Form, Input, Select, Row, Col, Typography } from "antd";
+import type { FormInstance } from "antd/es/form";
 const { Option } = Select;
 
 const ItemForm = () => {
@@ -21,12 +21,8 @@ const ItemForm = () => {
     }
   };
 
-  useEffect(() => {
-    console.log(shops);
-  }, [shops]);
-
   return (
-    <Form 
+    <Form
       ref={formRef}
       name="shop-ref"
       onFinish={onFinish}

@@ -1,6 +1,6 @@
-import React from 'react';
+import React from "react";
 import { Col, Row, Divider } from "antd";
-import BreadCumb from '../components/BreadCumb';
+import BreadCumb from "../components/BreadCumb";
 
 const Dashboard = () => {
   return (
@@ -21,9 +21,7 @@ const Dashboard = () => {
       <Col span={1} style={{ textAlign: "center" }}>
         <Divider type="vertical" style={{ height: "100%" }} />
       </Col>
-      <Col span={7}>
-        "payments"
-      </Col>
+      <Col span={7}>"payments"</Col>
     </Row>
   );
 };

@@ -36,10 +36,18 @@ aside {
 .ant-layout-sider-trigger {
   display: none;
 }
+.logo {
+  text-align: center;
+}
 .logo img {
-  height: 32px;
-  margin-right: 12px;
-  vertical-align: middle;
+  height: 4rem;
+  margin-bottom: 0.5rem;
+  border-radius: 1rem;
+}
+.ant-layout-sider-collapsed .logo img {
+  height: 1rem;
+  margin-bottom: 0.5rem;
+  border-radius: 1rem;
 }
 .breadcrumb {
   margin-bottom: 1rem;
