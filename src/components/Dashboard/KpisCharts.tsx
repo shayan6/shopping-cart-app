@@ -1,108 +1,54 @@
 import React from "react";
 import { DualAxes } from "@ant-design/plots";
-import { Card, Divider } from "antd";
+import { Card } from "antd";
+import { useSelector } from "react-redux";
+import { RootState } from "../../store/store";
 
 export default function KpisCharts() {
-  const uvBillData = [
-    {
-      time: "2019-03",
-      value: 350,
-      type: "Appintments",
-    },
-    {
-      time: "2019-04",
-      value: 900,
-      type: "Appintments",
-    },
-    {
-      time: "2019-05",
-      value: 300,
-      type: "Appintments",
-    },
-    {
-      time: "2019-06",
-      value: 450,
-      type: "Appintments",
-    },
-    {
-      time: "2019-07",
-      value: 470,
-      type: "Appintments",
-    },
-    {
-      time: "2019-03",
-      value: 220,
-      type: "Payments",
-    },
-    {
-      time: "2019-04",
-      value: 300,
-      type: "Payments",
-    },
-    {
-      time: "2019-05",
-      value: 250,
-      type: "Payments",
-    },
-    {
-      time: "2019-06",
-      value: 220,
-      type: "Payments",
-    },
-    {
-      time: "2019-07",
-      value: 362,
-      type: "Payments",
-    },
-  ];
-  const transformData = [
-    {
-      time: "2019-03",
-      count: 800,
-    },
-    {
-      time: "2019-04",
-      count: 600,
-    },
-    {
-      time: "2019-05",
-      count: 400,
-    },
-    {
-      time: "2019-06",
-      count: 380,
-    },
-    {
-      time: "2019-07",
-      count: 220,
-    },
-  ];
+  const settings = useSelector((state: RootState) => state.common.settings);
+  const cartItems = useSelector((state: RootState) => state.cart.cartItems);
+  const shopCountMap: Record<string, any> = {};
+  cartItems.forEach((item) => {
+    const { shop } = item;
+    shopCountMap[shop] = (shopCountMap[shop] || 0) + 1;
+  });
+
+  // Assuming your cartItems have the same structure as the provided data
+  const uvBillData = Object.keys(shopCountMap).map((shop) => ({
+    shop,
+    value: shopCountMap[shop],
+    type: "Items",
+  }));
+
+  const transformData = uvBillData.map(({ shop, value }) => ({
+    shop: shop, // Assuming shop names as time for transformData
+    count: value, // You can customize the count calculation based on your requirements
+  }));
+
   const config = {
     data: [uvBillData, transformData],
-    xField: "time",
+    xField: "shop",
     yField: ["value", "count"],
     geometryOptions: [
       {
         geometry: "column",
         isGroup: true,
         seriesField: "type",
+        color: [settings?.color.colorPrimary || "#7bc617"],
       },
       {
         geometry: "line",
         lineStyle: {
           lineWidth: 2,
         },
+        color: settings?.color.colorSuccess || "#7bc617",
       },
     ],
   };
+
   return (
-    <>
-      <Divider orientation="left" orientationMargin="0">
-        Key performance indicators
-      </Divider>
-      <Card>
-        <DualAxes {...config} />
-      </Card>
-    </>
+    <Card>
+      <DualAxes {...config} />
+    </Card>
   );
 }

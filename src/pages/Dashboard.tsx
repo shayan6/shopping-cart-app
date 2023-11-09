@@ -20,6 +20,7 @@ const Dashboard = () => {
         <HoverButtons />
         <Row gutter={16}>
           <Col span={24}>
+            <br/>
             <KpisCharts />
           </Col>
           <Col span={24}>
