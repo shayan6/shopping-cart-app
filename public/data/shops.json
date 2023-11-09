@@ -13,6 +13,21 @@
         "id": "selver",
         "name": "Selver",
         "sortOrder": 2
+    },
+    {
+        "id": "coop",
+        "name": "Coop",
+        "sortOrder": 4
+    },
+    {
+        "id": "lidl",
+        "name": "Lidl",
+        "sortOrder": 5
+    },
+    {
+        "id": "prisma",
+        "name": "Prisma",
+        "sortOrder": 6
     }
 ]
   

@@ -1,19 +1,21 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { RootState } from '../store/store';
+import { Card } from 'antd';
 
 const ShopList = () => {
   const shops = useSelector((state: RootState) => state.shop.shops);
+  const gridStyle: React.CSSProperties = {
+    width: '33.33%',
+    textAlign: 'center',
+  };
 
   return (
-    <div className="shop-list">
-      <h2>Shops</h2>
-      <ul>
-        {shops?.map((shop) => (
-          <li key={shop.id}>{shop.name}</li>
-        ))}
-      </ul>
-    </div>
+    <Card title="Shops">
+      {shops?.map((shop) => (
+        <Card.Grid key={shop.id} style={gridStyle}>{shop.name}</Card.Grid>
+      ))}
+    </Card>
   );
 };
 

@@ -1,31 +1,24 @@
 import React from 'react';
-import ItemForm from '../components/ItemForm';
+import ItemForm from '../components/Shop/ItemForm';
 import ShopList from '../components/ShopList';
-import ShoppingCart from '../components/ShoppingCart';
-import { Row, Col, Typography, Card } from "antd";
+import ShoppingCart from '../components/Shop/ShoppingCart';
+import { Row, Col, Card } from "antd";
 import PageHeader from "../components/PageHeader";
 
 const Shop = () => {
   return (
-    <Row className="shopping-cart">
+    <Row className="shopping-cart" gutter={[16, 16]}>
       <Col span={24}>
         <PageHeader title="Shopping Cart Application" />
       </Col>
       <Col span={24}>
         <Card>
-          <Typography.Title level={4}> Add to cart: </Typography.Title>
-          <div className="container">
-            <div className="left-column">
-              <ItemForm />
-            </div>
-            <div className="right-column">
-              <ShoppingCart />
-            </div>
-          </div>
-          <div className="shop-list-container">
-            <ShopList />
-          </div>
+          <ItemForm />
+          <ShoppingCart />
         </Card>
+      </Col>
+      <Col span={24}>
+        <ShopList />
       </Col>
     </Row>
   );
