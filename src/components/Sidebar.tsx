@@ -26,7 +26,7 @@ export default function Sidebar() {
   const { collapsed, settings } = useSelector(
     (state: CommonState) => state.common
   );
-  const theme = settings.theme ? settings.theme : "light";
+  const theme = settings?.theme ? settings.theme : "light";
   const { Sider } = Layout;
   const SidebarJson: SidebarItem[] = [
     {

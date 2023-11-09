@@ -33,7 +33,6 @@ export default function PaymentsChart() {
       );
     }
 
-    const textStyleStr = `width:${containerWidth}px;`;
     return (
       <div
         style={{
