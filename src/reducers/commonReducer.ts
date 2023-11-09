@@ -36,7 +36,7 @@ let defaultSetting = {
   color: {
     colorBlack: '#001529',
     colorWhite: '#f0f2f5',
-    colorPrimary: '#069bd3',
+    colorPrimary: '#1890ff',
     colorSecondary: '#3b3b3b',
     colorWarning: '#fc9258',
     colorSuccess: '#01c368',

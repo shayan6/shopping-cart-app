@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Row, Col, Card, Form, Input, Button, message, Typography } from "antd";
+import { Row, Col, Card, Form, Input, Button, message } from "antd";
 import { Switch } from "antd";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../store/store";
@@ -46,7 +46,7 @@ function ThemeSettings() {
   };
 
   const debouncedFinish = debounce(onFinish, 1000);
-  
+
   const handleThemeChange = (checked: boolean) => {
     setTheme(checked);
   };

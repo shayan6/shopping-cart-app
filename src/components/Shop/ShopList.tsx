@@ -9,6 +9,7 @@ import {
 
 const ShopList = () => {
   const shops: Shop[] = useSelector((state: RootState) => state.shop.shops);
+  const settings = useSelector((state: RootState) => state.common.settings);
   const gridStyle: React.CSSProperties = {
     width: "33.33%",
     textAlign: "center",
@@ -21,9 +22,10 @@ const ShopList = () => {
           <Space direction="vertical">
             <Avatar
               icon={<ShopOutlined />}
-              style={{ backgroundColor: "#7bc617" }}
+              style={{
+                backgroundColor: settings?.color.colorPrimary || "#7bc617",
+              }}
             />{" "}
-            {/* Use the outlined icon here */}
             <Typography.Text>{shop.name}</Typography.Text>
           </Space>
         </Card.Grid>
