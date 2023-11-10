@@ -103,7 +103,7 @@ Provide instructions on how to run the application locally.
 ```bash
 
 # Navigate to the project directory
-cd rshopping-cart-app
+cd shopping-cart-app
 
 # Install dependencies
 npm install
