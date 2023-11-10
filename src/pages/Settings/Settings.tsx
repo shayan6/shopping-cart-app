@@ -1,17 +1,12 @@
 import { Row, Col, Card, Tabs } from "antd";
-import PageHeader from "../components/PageHeader";
-import ThemeSettings from "../components/Settings/ThemeSettings";
-import CompanySettings from "../components/Settings/CompanySettings";
+import PageHeader from "../../components/PageHeader";
+import ThemeSettings from "../../components/Settings/ThemeSettings";
+import './style.scss';
 
 function Settings() {
   const items = [
     {
       key: "1",
-      label: `Company settings`,
-      children: <CompanySettings />,
-    },
-    {
-      key: "2",
       label: `Theme settings`,
       children: <ThemeSettings />,
     },

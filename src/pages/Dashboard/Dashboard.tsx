@@ -1,13 +1,13 @@
 import React from "react";
 import { Col, Row, Divider } from "antd";
-import BreadCumb from "../components/BreadCumb";
-import Filters from "../components/Dashboard/Filters";
-import RecentActivity from "../components/Dashboard/RecentActivity";
-import PaymentsChart from "../components/Dashboard/PaymentsChart";
-import "../assets/styles/dashboard.scss";
-import KpisCharts from "../components/Dashboard/KpisCharts";
-import HoverButtons from "../components/Dashboard/HoverButtons";
-import ShopsTable from "../components/Dashboard/ShopsTable";
+import BreadCumb from "../../components/BreadCumb";
+import Filters from "../../components/Dashboard/Filters";
+import RecentActivity from "../../components/Dashboard/RecentActivity";
+import PaymentsChart from "../../components/Dashboard/DoughnutChart";
+import KpisCharts from "../../components/Dashboard/KpisCharts";
+import HoverButtons from "../../components/Dashboard/HoverButtons";
+import ShopsTable from "../../components/Dashboard/ShopsTable";
+import "./style.scss";
 
 const Dashboard = () => {
   return (

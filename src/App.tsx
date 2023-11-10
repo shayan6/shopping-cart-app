@@ -7,9 +7,9 @@ import { HashRouter, Routes, Route } from "react-router-dom";
 import { Content } from "antd/es/layout/layout";
 import { ConfigProvider, Col, Divider, Layout, Row } from "antd";
 import Footer from './components/Footer';
-import Shop from './pages/Shop';
-import Dashboard from './pages/Dashboard';
-import Settings from './pages/Settings';
+import Shop from './pages/Shop/Shop';
+import Dashboard from './pages/Dashboard/Dashboard';
+import Settings from './pages/Settings/Settings';
 
 function App() {
   const dispatch: AppDispatch = useDispatch();

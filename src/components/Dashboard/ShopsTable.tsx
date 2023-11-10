@@ -7,6 +7,7 @@ import {
 
 export default function ShopsTable() {
   const { shops } = useSelector((state: RootState) => state.shop);
+  const settings = useSelector((state: RootState) => state.common.settings);
 
   const columns = [
     {
@@ -15,7 +16,12 @@ export default function ShopsTable() {
       key: "id",
       render: (id: string) => (
         <span className="nowrap">
-          <Avatar style={{ backgroundColor: '#1890ff' }} icon={<ShopOutlined />} />
+          <Avatar
+            style={{
+              backgroundColor: settings?.color.colorPrimary || "#7bc617",
+            }}
+            icon={<ShopOutlined />}
+          />
         </span>
       ),
     },

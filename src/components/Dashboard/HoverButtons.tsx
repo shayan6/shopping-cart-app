@@ -7,6 +7,10 @@ import { RootState } from "../../store/store";
 export default function HoverButtons() {
   const { shop, cart } = useSelector((state: RootState) => state);
   const { Text } = Typography;
+  const settings = useSelector((state: RootState) => state.common.settings);
+  const style = {
+    color: settings?.color.colorPrimary || "#7bc617",
+  };
   return (
     <Row gutter={18}>
       <Col span={24}>
@@ -16,7 +20,7 @@ export default function HoverButtons() {
         <Card className="el-tablo">
           <Row>
             <Col span={12}>
-              <span className="iconCircle">
+              <span className="iconCircle" style={style}>
                 <CalendarOutlined />
               </span>
             </Col>
@@ -33,7 +37,7 @@ export default function HoverButtons() {
         <Card className="el-tablo">
           <Row>
             <Col span={12}>
-              <span className="iconCircle">
+              <span className="iconCircle" style={style}>
                 <DollarOutlined />
               </span>
             </Col>
