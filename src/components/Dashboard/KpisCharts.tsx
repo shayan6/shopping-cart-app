@@ -7,7 +7,7 @@ import { RootState } from "../../store/store";
 export default function KpisCharts() {
   const settings = useSelector((state: RootState) => state.common.settings);
   const cartItems = useSelector((state: RootState) => state.cart.cartItems);
-  const shopCountMap: Record<string, any> = {};
+  const shopCountMap: Record<string, number> = {};
   cartItems.forEach((item) => {
     const { shop } = item;
     shopCountMap[shop] = (shopCountMap[shop] || 0) + 1;

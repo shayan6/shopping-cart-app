@@ -13,7 +13,7 @@ const ItemForm = () => {
   const dispatch = useDispatch();
   const shops = useSelector((state: RootState) => state.shop.shops);
 
-  const onFinish = (values: any) => {
+  const onFinish = (values: Record<string, string>) => {
     const { name, shop } = values;
     if (name && shop) {
       dispatch(addItem({ id: uuidv4(), name, shop }));

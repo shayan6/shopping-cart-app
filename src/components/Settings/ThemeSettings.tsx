@@ -24,7 +24,7 @@ function ThemeSettings() {
     "colorWhite",
   ];
 
-  const onFinish = (el: any) => {
+  const onFinish = (el: Record<string, string>) => {
     const newSettings = {
       theme: theme ? "dark" : "light",
       color: {
