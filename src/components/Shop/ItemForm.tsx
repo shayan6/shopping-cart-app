@@ -28,13 +28,13 @@ const ItemForm = () => {
       style={{ maxWidth: 600 }}
     >
       <Typography.Title level={4}> Add to cart: </Typography.Title>
-      <Row gutter={16}>
-        <Col span={10}>
+      <Row gutter={[16, 16]}>
+        <Col xs={24} sm={12} md={10}>
           <Form.Item name="name" rules={[{ required: true }]}>
             <Input placeholder="Item name" />
           </Form.Item>
         </Col>
-        <Col span={10}>
+        <Col xs={24} sm={12} md={10}>
           <Form.Item name="shop" rules={[{ required: true }]}>
             <Select placeholder="Select a shop">
               {shops?.map((shop) => (
@@ -45,9 +45,9 @@ const ItemForm = () => {
             </Select>
           </Form.Item>
         </Col>
-        <Col span={4}>
+        <Col xs={24} sm={12} md={4}>
           <Form.Item>
-            <Button type="primary" htmlType="submit">
+            <Button type="primary" htmlType="submit" style={{ width: "100%" }}>
               Add
             </Button>
           </Form.Item>

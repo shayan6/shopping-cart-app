@@ -9,7 +9,7 @@ const Shop = () => {
   return (
     <Row className="shopping-cart" gutter={[16, 16]}>
       <Col span={24}>
-        <PageHeader title="Shopping Cart Application" />
+        <PageHeader title="Shopping cart" />
       </Col>
       <Col span={24}>
         <Card>

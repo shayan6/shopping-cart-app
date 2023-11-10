@@ -15,14 +15,19 @@ const ShoppingCart = () => {
   return (
     <div className="shopping-cart" style={{ maxWidth: 600 }}>
       {cartItems?.map((item) => (
-        <Row key={item.id} gutter={16}>
-          <Col span={10}>{item.name}</Col>
-          <Col span={10}>{item.shop}</Col>
-          <Col span={2}>
+        <Row key={item.id} gutter={16} style={{ marginBottom: 8 }}>
+          <Col xs={24} sm={12} md={10}>
+            {item.name}
+          </Col>
+          <Col xs={24} sm={12} md={10}>
+            {item.shop}
+          </Col>
+          <Col xs={24} sm={12} md={4}>
             <Button
               type="link"
               danger
               onClick={() => handleRemoveItem(item.id)}
+              style={{ width: "100%" }}
             >
               Remove
             </Button>
