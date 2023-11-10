@@ -1,46 +1,121 @@
-# Getting Started with Create React App
+# React Redux Shopping List App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A small React.js application demonstrating the setup and structure of a web application. The app allows users to add new items by shop, view and manage the shopping list, and ensures a pixel-perfect UI based on design specifications.
 
-## Available Scripts
+## Table of Contents
 
-In the project directory, you can run:
+- [Project Setup](#project-setup)
+- [Dependencies](#dependencies)
+- [Folder Structure](#folder-structure)
+- [Components and Features](#components-and-features)
+- [Design](#design)
+- [Testing](#testing)
+- [General Considerations](#general-considerations)
+- [Notes](#notes)
+- [Usage](#usage)
 
-### `npm start`
+## Project Setup
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+1. **Create React App:**
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+   - Set up a new React app using Create React App or your preferred boilerplate.
+   - Initialize a Git repository for version control.
 
-### `npm test`
+2. **Folder Structure:**
+   - Organize your project structure. A possible structure might be:
+     ```
+     /src
+        /actions
+        /assets
+        /components
+        /pages
+        /reducers
+        /store
+        /tests
+     ```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Dependencies
 
-### `npm run build`
+1. **React and TypeScript:**
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+   - Make sure to use TypeScript for static typing in your React components.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2. **Redux with Thunks:**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+   - Set up Redux and Thunks for state management.
+   - Create actions, reducers, and thunks for managing the shopping list state.
 
-### `npm run eject`
+3. **Sass Preprocessor:**
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+   - Integrate Sass for styling your components.
+   - Use variables, mixins, and other features to maintain a clean and organized stylesheet.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+4. **Jest and React Testing Library:**
+   - Write unit or integration tests for your React components.
+   - Ensure good code coverage.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Components and Features
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+1. **Adding New Item by Shop:**
 
-## Learn More
+   - Create a form component for adding new items.
+   - Implement form validation using native HTML validations.
+   - Use native HTML dropdowns for shop selection.
+   - Fetch data from `shops.json` for shop options.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+2. **Showing/Managing The List:**
+   - Display the list of items.
+   - Implement the delete functionality for each item.
+   - Ensure items disappear from the list after deletion.
+   - Order the list based on the "sortOrder" property.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Design
+
+1. **Pixel-Perfect UI:**
+   - Use SCSS to style your components and achieve a pixel-perfect UI based on the design file.
+   - Pay attention to responsive design principles.
+
+## Testing
+
+1. **Unit/Integration Tests:**
+   - Write tests for your React components using Jest and React Testing Library.
+   - Test the functionality of adding items, deleting items, and the order of the list.
+
+## General Considerations
+
+1. **Good Design/Development Principles:**
+
+   - Follow best practices for React development.
+   - Write clean, maintainable, and modular code.
+
+2. **Documentation:**
+
+   - Provide clear and concise documentation for your code.
+   - Include instructions on how to run the application and tests.
+
+3. **Cross-Browser Compatibility:**
+   - Ensure the application works well in the latest versions of Chrome, Firefox, and Safari.
+
+## Usage
+
+Provide instructions on how to run the application locally.
+
+```bash
+
+# Navigate to the project directory
+cd rshopping-cart-app
+
+# Install dependencies
+npm install
+
+# Run the application
+npm start
+```
+
+## Notes
+
+- **Data Persistence:**
+  - The application utilizes `localStorage` for data persistence. This means that the shopping list will be saved between sessions. Users can close and reopen the application without losing their added items.
+
+- **Browser Compatibility:**
+  - The application has been tested and is compatible with the latest versions of Chrome, Firefox, and Safari (on macOS devices).

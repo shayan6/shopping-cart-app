@@ -2,8 +2,8 @@ import React from 'react';
 import { render, fireEvent, waitFor } from '@testing-library/react';
 import { Provider } from 'react-redux';
 import configureStore from 'redux-mock-store';
-import ItemForm from './ItemForm';
-import { addItem } from '../../reducers/cartReducer';
+import ItemForm from '../components/Shop/ItemForm';
+import { addItem } from '../reducers/cartReducer';
 import { useSelector, useDispatch } from "react-redux";
 
 
