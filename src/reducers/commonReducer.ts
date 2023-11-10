@@ -31,7 +31,7 @@ interface CommonState {
   settings: Settings | null;
 }
 
-let defaultSetting = {
+const defaultSetting = {
   theme: 'light',
   color: {
     colorBlack: '#001529',
@@ -47,7 +47,7 @@ let defaultSetting = {
   }
 };
 
-const initialState: CommonState = {
+export const initialState: CommonState = {
   menu: [],
   loading: true,
   pageLoader: true,
