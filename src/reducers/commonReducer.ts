@@ -1,50 +1,20 @@
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
-
-interface Color {
-  colorBlack: string;
-  colorWhite: string;
-  colorPrimary: string;
-  colorSecondary: string;
-  colorWarning: string;
-  colorSuccess: string;
-  colorDanger: string;
-  colorYellow: string;
-  colorPurple: string;
-  colorPink: string;
-}
-
-interface Settings {
-  theme: string;
-  color: Color;
-}
-
-interface CommonState {
-  menu: any[]; // Adjust the type according to your actual menu items
-  loading: boolean;
-  pageLoader: boolean;
-  collapsed: boolean;
-  postData: {
-    page: number;
-    limit: number;
-  };
-  data: any; // Adjust the type according to your actual data structure
-  settings: Settings | null;
-}
+import { CommonState, Settings } from "../types";
 
 const defaultSetting = {
-  theme: 'light',
+  theme: "light",
   color: {
-    colorBlack: '#001529',
-    colorWhite: '#f0f2f5',
-    colorPrimary: '#1890ff',
-    colorSecondary: '#3b3b3b',
-    colorWarning: '#fc9258',
-    colorSuccess: '#01c368',
-    colorDanger: '#ff4d57',
-    colorYellow: '#ffeb3b',
-    colorPurple: '#673ab7',
-    colorPink: '#E91E63'
-  }
+    colorBlack: "#001529",
+    colorWhite: "#f0f2f5",
+    colorPrimary: "#1890ff",
+    colorSecondary: "#3b3b3b",
+    colorWarning: "#fc9258",
+    colorSuccess: "#01c368",
+    colorDanger: "#ff4d57",
+    colorYellow: "#ffeb3b",
+    colorPurple: "#673ab7",
+    colorPink: "#E91E63",
+  },
 };
 
 export const initialState: CommonState = {
@@ -75,7 +45,10 @@ const commonSlice = createSlice({
     toggleCollapse: (state) => {
       state.collapsed = !state.collapsed;
     },
-    setPostData: (state, action: PayloadAction<{ page: number; limit: number }>) => {
+    setPostData: (
+      state,
+      action: PayloadAction<{ page: number; limit: number }>
+    ) => {
       state.postData = { ...action.payload };
     },
     setPageLoader: (state, action: PayloadAction<boolean>) => {

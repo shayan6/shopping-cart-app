@@ -1,9 +1,7 @@
 import { Col, Divider, Row, Tag, Table, Avatar } from "antd";
 import { useSelector } from "react-redux";
 import { RootState } from "../../store/store";
-import {
-  ShopOutlined, // Import the outlined icon you want to use
-} from "@ant-design/icons";
+import { ShopOutlined } from "@ant-design/icons";
 
 export default function ShopsTable() {
   const { shops } = useSelector((state: RootState) => state.shop);
@@ -57,7 +55,7 @@ export default function ShopsTable() {
     id: shop.id,
     name: shop.name,
     sortOrder: shop.sortOrder,
-    status: "Open", // Actions will be handled in the render function
+    status: "Open",
   }));
 
   return (

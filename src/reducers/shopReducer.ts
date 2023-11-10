@@ -1,4 +1,3 @@
-// src/reducers/shopReducer.ts
 import { createSlice } from "@reduxjs/toolkit";
 import { loadShops } from "../actions/shopActions";
 import { ShopState } from "../types";

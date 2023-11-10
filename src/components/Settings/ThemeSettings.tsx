@@ -41,7 +41,7 @@ function ThemeSettings() {
       },
     };
 
-    dispatch(setSettings(newSettings));
+    dispatch(setSettings(newSettings as any));
     message.success("Saved successfully!");
   };
 

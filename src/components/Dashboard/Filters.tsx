@@ -2,7 +2,7 @@ import { Col, Row, Select, Space, Typography } from "antd";
 import React from "react";
 import { RootState } from "../../store/store";
 import { useSelector } from "react-redux";
-const { Option } = Select; // Add this line
+const { Option } = Select;
 
 export default function Filters() {
   const shops = useSelector((state: RootState) => state.shop.shops);

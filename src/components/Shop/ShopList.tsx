@@ -4,7 +4,7 @@ import { RootState } from "../../store/store";
 import { Avatar, Card, Space, Typography } from "antd";
 import { Shop } from "../../types";
 import {
-  ShopOutlined, // Import the outlined icon you want to use
+  ShopOutlined,
 } from "@ant-design/icons";
 
 const ShopList = () => {

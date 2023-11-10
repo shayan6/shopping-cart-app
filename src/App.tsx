@@ -15,7 +15,6 @@ function App() {
   const dispatch: AppDispatch = useDispatch();
 
   useEffect(() => {
-    // Dispatch the action to load shops when the component mounts
     dispatch(loadShops());
   }, [dispatch]);
 

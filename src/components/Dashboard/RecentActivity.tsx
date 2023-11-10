@@ -6,7 +6,6 @@ import avatar from "../../assets/images/avatar.jpg";
 import { RootState } from "../../store/store";
 
 export default function RecentActivity() {
-  // Assuming your reducer has a slice named 'cart' with a 'cartItems' property
   const cartItems = useSelector((state: RootState) => state.cart.cartItems);
 
   return (

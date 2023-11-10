@@ -13,7 +13,7 @@ export default function KpisCharts() {
     shopCountMap[shop] = (shopCountMap[shop] || 0) + 1;
   });
 
-  // Assuming your cartItems have the same structure as the provided data
+  console.log(cartItems);
   const uvBillData = Object.keys(shopCountMap).map((shop) => ({
     shop,
     value: shopCountMap[shop],
@@ -21,9 +21,11 @@ export default function KpisCharts() {
   }));
 
   const transformData = uvBillData.map(({ shop, value }) => ({
-    shop: shop, // Assuming shop names as time for transformData
-    count: value, // You can customize the count calculation based on your requirements
+    shop: shop,
+    count: value,
   }));
+
+  console.log(transformData);
 
   const config = {
     data: [uvBillData, transformData],
@@ -41,6 +43,7 @@ export default function KpisCharts() {
         lineStyle: {
           lineWidth: 2,
         },
+        seriesField: "count",
         color: settings?.color.colorSuccess || "#7bc617",
       },
     ],

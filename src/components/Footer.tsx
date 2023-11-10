@@ -4,8 +4,8 @@ import {
   GithubOutlined,
   YoutubeOutlined,
   InstagramOutlined,
-  CodeOutlined, // Code icon for HackerRank
-  LinkedinOutlined, // LinkedIn icon
+  CodeOutlined,
+  LinkedinOutlined,
 } from "@ant-design/icons";
 
 const Footer = () => {
@@ -15,13 +15,11 @@ const Footer = () => {
     marginBottom: "10px",
   };
 
-  // Define a common style for the icons
   const iconStyle = {
     fontSize: "1.5rem",
     marginRight: "1rem",
   };
 
-  // Define CSS classes for each icon's color
   const linkedinIconColor = { color: "#0077b5" };
   const youtubeIconColor = { color: "#FF0000" };
   const githubIconColor = { color: "#333" };

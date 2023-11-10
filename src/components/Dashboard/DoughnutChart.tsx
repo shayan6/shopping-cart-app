@@ -13,7 +13,7 @@ export default function DoughnutChart() {
       const existingShop = acc.find((x) => x.shop === item.shop);
 
       if (existingShop) {
-        existingShop.sales += 1; // Assuming each item represents a sale
+        existingShop.sales += 1;
       } else {
         const color = colors?.[i];
         acc.push({ shop: item.shop, sales: 1, color });
@@ -33,7 +33,7 @@ export default function DoughnutChart() {
     angleField: "sales",
     colorField: "shop",
     radius: 0.8,
-    innerRadius: 0.6, // Set innerRadius to create a doughnut chart
+    innerRadius: 0.6,
     label: {
       type: "inner",
       offset: "-30%",
@@ -46,7 +46,7 @@ export default function DoughnutChart() {
       content: {
         formatter: () => `${totalSales}`,
         style: {
-          fontSize: "2rem", // Adjust the font size as needed
+          fontSize: "2rem",
         },
       },
     },

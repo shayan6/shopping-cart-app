@@ -1,18 +1,46 @@
 export interface Shop {
-    id: string;
-    name: string;
-    sortOrder: number;
+  id: string;
+  name: string;
+  sortOrder: number;
 }
-  
-// Define the ShopState type
+
 export interface ShopState {
-    shops: Shop[]; // An array of Shop objects
+  shops: Shop[];
 }
 
 export interface CartItem {
-    id: string;
-    name: string;
-    shop: string;
+  id: string;
+  name: string;
+  shop: string;
 }
 
-export type CommonState = Record<string, any>;
+export interface Color {
+  colorBlack: string;
+  colorWhite: string;
+  colorPrimary: string;
+  colorSecondary: string;
+  colorWarning: string;
+  colorSuccess: string;
+  colorDanger: string;
+  colorYellow: string;
+  colorPurple: string;
+  colorPink: string;
+}
+
+export interface Settings {
+  theme: "light" | "dark" | undefined;
+  color: Color;
+}
+
+export interface CommonState {
+  menu: any[];
+  loading: boolean;
+  pageLoader: boolean;
+  collapsed: boolean;
+  postData: {
+    page: number;
+    limit: number;
+  };
+  data: any;
+  settings: Settings | null;
+}

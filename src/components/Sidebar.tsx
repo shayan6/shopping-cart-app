@@ -6,11 +6,11 @@ import {
 } from "@ant-design/icons";
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Link } from "react-router-dom"; // Import Link from react-router-dom instead of NavLink
+import { Link } from "react-router-dom";
 import { LeftOutlined, RightOutlined } from "@ant-design/icons";
-import { CommonState } from "../types";
 import { toggleCollapse } from "../reducers/commonReducer";
 import img from "../assets/images/logo.gif";
+import { RootState } from "../store/store";
 
 interface SidebarItem {
   name: string;
@@ -24,7 +24,7 @@ interface SidebarItem {
 export default function Sidebar() {
   const dispatch = useDispatch();
   const { collapsed, settings } = useSelector(
-    (state: CommonState) => state.common
+    (state: RootState) => state.common
   );
   const theme = settings?.theme ? settings.theme : "light";
   const { Sider } = Layout;
@@ -32,14 +32,14 @@ export default function Sidebar() {
     {
       name: "Dashboard",
       icon: <DashboardOutlined />,
-      path: "/Dashboard", // Use the correct path format
+      path: "/Dashboard",
       display: true,
       isActive: true,
     },
     {
       name: "Shopping cart",
       icon: <ReconciliationOutlined />,
-      path: "/Shop", // Use the correct path format
+      path: "/Shop",
       display: true,
     },
     {
