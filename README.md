@@ -77,15 +77,15 @@ A small React.js application demonstrating the setup and structure of a web appl
 
 ### Dashboard
 
-![Dashboard](/images/1.jpg)
+![Dashboard](/images/dashboard.jpg)
 
 ### Shopping Cart
 
-![Shopping Cart](/images/3.jpg)
+![Shopping Cart](/images/shopping-cart.jpg)
 
 ### Settings
 
-![Settings](/images/2.jpg)
+![Settings](/images/settings.jpg)
 
 ## Testing
 
