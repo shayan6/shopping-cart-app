@@ -75,6 +75,18 @@ A small React.js application demonstrating the setup and structure of a web appl
    - Use SCSS to style your components and achieve a pixel-perfect UI based on the design file.
    - Pay attention to responsive design principles.
 
+### Dashboard
+
+![Dashboard](/images/1.jpg)
+
+### Shopping Cart
+
+![Shopping Cart](/images/3.jpg)
+
+### Settings
+
+![Settings](/images/2.jpg)
+
 ## Testing
 
 1. **Unit/Integration Tests:**
