@@ -131,3 +131,9 @@ npm start
 
 - **Browser Compatibility:**
   - The application has been tested and is compatible with the latest versions of Chrome, Firefox, and Safari (on macOS devices).
+
+## Contact
+
+If you have any questions or concerns, feel free to reach out via email:
+
+- Project Maintainer: [shayanshaikh996@gmail.com](mailto:shayanshaikh996@gmail.com)
