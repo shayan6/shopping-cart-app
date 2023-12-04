@@ -113,6 +113,8 @@ A small React.js application demonstrating the setup and structure of a web appl
 Provide instructions on how to run the application locally.
 
 ```bash
+# Clone the repository
+ git clone https://github.com/shayan6/shopping-cart-app.git
 
 # Navigate to the project directory
 cd shopping-cart-app
