@@ -1,3 +1,4 @@
+import React from "react";
 import { Row, Col, Card, Tabs } from "antd";
 import PageHeader from "../../components/PageHeader";
 import ThemeSettings from "../../components/Settings/ThemeSettings";

@@ -1,5 +1,5 @@
 import React from "react";
-import { render, fireEvent } from "@testing-library/react";
+import { render } from "@testing-library/react";
 import { Provider } from "react-redux";
 import configureStore from "redux-mock-store";
 import ShoppingCart from "../components/Shop/ShoppingCart";
@@ -46,14 +46,14 @@ test("ShoppingCart renders correctly with items", () => {
   const dispatchMock = jest.fn();
   (useDispatch as jest.Mock).mockReturnValue(dispatchMock);
 
-  const { getByText } = render(
+  const screen = render(
     <Provider store={configureStore()({})}>
       <ShoppingCart />
     </Provider>
   );
 
-  expect(getByText("Item 1")).toBeInTheDocument();
-  expect(getByText("Item 2")).toBeInTheDocument();
-  expect(getByText("rimi")).toBeInTheDocument();
-  expect(getByText("selver")).toBeInTheDocument();
+  expect(screen.getByText("Item 1")).toBeInTheDocument();
+  expect(screen.getByText("Item 2")).toBeInTheDocument();
+  expect(screen.getByText("rimi")).toBeInTheDocument();
+  expect(screen.getByText("selver")).toBeInTheDocument();
 });

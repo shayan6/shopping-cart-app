@@ -1,9 +1,8 @@
 import React from 'react';
-import { render, fireEvent, waitFor } from '@testing-library/react';
+import { render, fireEvent } from '@testing-library/react';
 import { Provider } from 'react-redux';
 import configureStore from 'redux-mock-store';
 import ItemForm from '../components/Shop/ItemForm';
-import { addItem } from '../reducers/cartReducer';
 import { useSelector, useDispatch } from "react-redux";
 
 
@@ -51,15 +50,15 @@ test('ItemForm handles form submission correctly', async () => {
   const dispatchMock = jest.fn();
   (useDispatch as jest.Mock).mockReturnValue(dispatchMock);
 
-  const { getByPlaceholderText, getByText } = render(
+  const screen = render(
     <Provider store={store}>
       <ItemForm />
     </Provider>
   );
 
   // Fill in the form fields
-  fireEvent.change(getByPlaceholderText('Item name'), { target: { value: 'Test Item' } });
+  fireEvent.change(screen.getByPlaceholderText('Item name'), { target: { value: 'Test Item' } });
 
   // Submit the form
-  fireEvent.click(getByText('Add'));
+  fireEvent.click(screen.getByText('Add'));
 });

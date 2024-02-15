@@ -1,3 +1,4 @@
+import React from "react";
 import { Card, Col, Row, Typography } from "antd";
 import BreadCumb from "./BreadCumb";
 
