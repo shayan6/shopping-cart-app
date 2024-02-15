@@ -6,15 +6,11 @@
 // ##############################################################
 body {
   margin: 0 auto;
-  font-family: $bodyFont !important;
+  font-family: $bodyFont;
 }
 
 header {
   border-bottom: 1px solid rgba(5, 5, 5, 0.06);
-}
-
-.ant-menu {
-  border: none !important;
 }
 
 aside {
@@ -35,10 +31,10 @@ aside {
   padding-bottom: 0.8rem;
 }
 
-.ant-layout-content {
+main.ant-layout-content {
   margin: $layoutMargin;
   padding: $layoutPadding;
-  min-height: 98vh !important;
+  min-height: 98vh;
 }
 
 .ant-layout-sider-trigger {
@@ -120,24 +116,6 @@ aside {
 
   .ant-menu-title-content {
     margin-left: 15px;
-    transition: all 0.2s ease;
-  }
-}
-
-.transition-scale:hover {
-  .element {
-    -webkit-transform: scale(1.2);
-    transform: scale(1.2);
-    transition: all 0.2s ease;
-  }
-
-  span {
-    margin-left: 5px;
-    transition: all 0.2s ease;
-  }
-
-  .license-image-element {
-    padding: 2px !important;
     transition: all 0.2s ease;
   }
 }

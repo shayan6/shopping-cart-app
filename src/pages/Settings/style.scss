@@ -1,19 +1,19 @@
 // ##############################################################
 // Settings #####################################################
 // ##############################################################
-[type="color"] {
+.ant-form-item-control-input-content [type="color"] {
     appearance: none;
     padding: 0;
-    width: 3rem !important;
-    height: 1.5rem !important;
+    width: 3rem;
+    height: 1.5rem;
     border: none;
     border-radius: 8px;
 }
 
-[type="color"]::-webkit-color-swatch-wrapper {
+.ant-form-item-control-input-content [type="color"]::-webkit-color-swatch-wrapper {
     padding: 0;
 }
 
-[type="color"]::-webkit-color-swatch {
+.ant-form-item-control-input-content [type="color"]::-webkit-color-swatch {
     border: none;
 }
