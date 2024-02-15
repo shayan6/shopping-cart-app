@@ -13,7 +13,6 @@ export default function KpisCharts() {
     shopCountMap[shop] = (shopCountMap[shop] || 0) + 1;
   });
 
-  console.log(cartItems);
   const uvBillData = Object.keys(shopCountMap).map((shop) => ({
     shop,
     value: shopCountMap[shop],
@@ -24,8 +23,6 @@ export default function KpisCharts() {
     shop: shop,
     count: value,
   }));
-
-  console.log(transformData);
 
   const config = {
     data: [uvBillData, transformData],
