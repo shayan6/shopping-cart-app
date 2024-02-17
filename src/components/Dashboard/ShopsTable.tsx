@@ -16,6 +16,7 @@ export default function ShopsTable() {
       render: (id: string) => (
         <span className="nowrap">
           <Avatar
+            className={`avatar${id}`}
             style={{
               backgroundColor: settings?.color.colorPrimary || "#7bc617",
             }}
