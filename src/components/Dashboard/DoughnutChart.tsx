@@ -42,6 +42,7 @@ export default function DoughnutChart() {
         textAlign: "center",
       },
     },
+    ...(settings?.color && { color: Object.values(settings.color) } ),
     statistic: {
       content: {
         formatter: () => `${totalSales}`,
